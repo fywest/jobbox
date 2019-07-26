@@ -1,1 +1,24 @@
-<p>userregister works!</p>
+<!-- <p>userregister works!</p> -->
+
+<div class="container">
+    
+    <form class="form">
+      <h2>User Register Form</h2>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <!-- <input class="form-control"  id="name" type="text"  required [value]="user.name"> -->
+        <input type='text' name='name' placeholder='Input your name' [(ngModel)]='user.name'>
+      </div>
+ 
+      <div class="form-group">
+        <label for="email">Email</label>
+        <!-- <input type="text" class="form-control" id="email" required [value]="user.email"> -->
+        <input type='text' name='email' placeholder='Input your email' [(ngModel)]='user.email'>
+      </div>
+ 
+      <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+      <button type="submit" class="btn btn-success" (click)="showUser()">Submit</button>
+ 
+    </form>
+   {{ user | json }}
+</div>
